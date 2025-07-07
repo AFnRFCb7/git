@@ -1,4 +1,3 @@
-															${ builtins.concatStringsSep "\n" ( builtins.attrValues ( builtins.mapAttrs config-mapper config ) ) }
 {
 	inputs = { } ;
 	outputs =
