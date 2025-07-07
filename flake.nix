@@ -3,15 +3,15 @@
 	outputs =
 		{ self } :
 			{
-				init ? "" ,
-				config ? { } ,
-				hooks ? { } ,
-				nixpkgs ,
-				remotes ? { } ,
-				system
-			} @primary :
-				{
-					lib.implementation =
+				lib.implementation =
+					{
+						init ? "" ,
+						config ? { } ,
+						hooks ? { } ,
+						nixpkgs ,
+						remotes ? { } ,
+						system
+					} @primary :
 						let
 							application =
 								pkgs.writeShellApplication
