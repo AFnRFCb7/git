@@ -1,3 +1,4 @@
+															${ builtins.concatStringsSep "\n" ( builtins.attrValues ( builtins.mapAttrs config-mapper config ) ) }
 {
 	inputs = { } ;
 	outputs =
@@ -32,6 +33,8 @@
 															cd ${ token }
 															git init
 															${ builtins.concatStringsSep "\n" ( builtins.attrValues ( builtins.mapAttrs config-mapper config ) ) }
+															${ builtins.concatStringsSep "\n" ( builtins.attrValues ( builtins.mapAttrs hook-mapper hooks ) ) }
+															${ builtins.concatStringsSep "\n" ( builtins.attrValues ( builtins.mapAttrs remote-mapper remotes ) ) }
 														fi
 														echo ${ token }
 													'' ;
