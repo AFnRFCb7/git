@@ -10,7 +10,7 @@
 						hooks ? { } ,
 						nixpkgs ,
 						remotes ? { } ,
-						system
+						system ? null
 					} @primary :
 						let
 							application =
