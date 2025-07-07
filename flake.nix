@@ -3,11 +3,11 @@
 	outputs =
 		{ self } :
 			{
-				init ,
-				config ,
-				hooks ,
+				init ? "" ,
+				config ? { } ,
+				hooks ? { } ,
 				nixpkgs ,
-				remotes ,
+				remotes , { } ,
 				system
 			} @primary :
 				{
