@@ -32,9 +32,6 @@
 															cd ${ token }
 															git init
 															${ builtins.concatStringsSep "\n" ( builtins.attrValues ( builtins.mapAttrs config-mapper config ) ) }
-															${ builtins.concatStringsSep "\n" ( builtins.attrValues ( builtins.mapAttrs hook-mapper config ) ) }
-															${ builtins.concatStringsSep "\n" ( builtins.attrValues ( builtins.mapAttrs remote-mapper config ) ) }
-															${ pkgs.writeShellScript "init" init }
 														fi
 														echo ${ token }
 													'' ;
