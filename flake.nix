@@ -7,7 +7,7 @@
 				config ? { } ,
 				hooks ? { } ,
 				nixpkgs ,
-				remotes , { } ,
+				remotes { } ,
 				system
 			} @primary :
 				{
