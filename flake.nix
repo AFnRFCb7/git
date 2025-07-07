@@ -6,7 +6,9 @@
 				init ,
 				config ,
 				hooks ,
-				remotes
+				nixpkgs ,
+				remotes ,
+				system
 			} @primary :
 				{
 					lib.implementation =
